@@ -14,8 +14,8 @@ FONT SIZE SYSTEM (px)
 /*
 COLORS:
 
-Lighter version: #ffa94d
-Main color: #fd7e14
+Background color (very light): #fff4ed
+Lighter version: #ff914d
 Darker version: #e8590c
 Accents: 
 Greys: #555
@@ -40,7 +40,7 @@ body {
     color: #555;
 }
 
-.container {
+.nav-container {
     margin: 0 auto;
     width: 100%;
     background-color: #ff914d;
@@ -49,9 +49,10 @@ body {
     display: flex;
     text-align: center;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
-header {
+.section-hero {
     font-size: 1.6rem;
     color: #fff;
     height: 100vh;
@@ -62,6 +63,7 @@ header {
     background-image: linear-gradient(rgba(34,34,34,0.6), rgba(34,34,34,0.6)), url(../img/hero2.avif);
     background-size: cover;
     color: #fff;
+    margin-bottom: 9.6rem;
 }
 
 nav {
@@ -111,8 +113,41 @@ nav:hover {
     margin-bottom: 3.2rem;
 }
 
+.easy-span {
+    color: #ff914d;
+    font-style: italic;
+}
+
 .hero-description {
     font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 4.8rem;
+}
+
+.btn:link, .btn:visited {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.6rem 3.2rem;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.8rem;
+    border-radius: 1.5rem;
+  } 
+  
+  .btn:hover, .btn:active {
+    background-color: #e8590c;
+  }
+
+.btn--full:link, .btn--full:visited {
+    background-color: #ff914d;;
+}
+
+.btn--outline:link, .btn--outline:visited {
+    background-color: #fff;
+    color: #555;
+}
+
+.bleble {
+    background-color: #fff4ed;
 }
