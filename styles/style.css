@@ -34,11 +34,13 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Inter" sans-serif;
     line-height: 1;
     font-weight: 400;
     color: #555;
 }
+
+/* HEADER */
 
 .nav-container {
     margin: 0 auto;
@@ -50,6 +52,10 @@ body {
     text-align: center;
     justify-content: space-between;
     flex-shrink: 0;
+    transition: opacity 0.3s;
+
+    /* I want this to be sticky later */
+    height: 7.4rem;
 }
 
 .section-hero {
@@ -59,7 +65,6 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-
     background-image: linear-gradient(rgba(34,34,34,0.6), rgba(34,34,34,0.6)), url(../img/hero2.avif);
     background-size: cover;
     color: #fff;
@@ -77,11 +82,52 @@ nav:hover {
     opacity: 1;
 }
 
+
+
 .logo-foodtopia {
-    margin-left: 1.6rem;
+    margin-left: 2rem;
     max-width: 7.4rem;
     max-height: 7.4rem;
 }
+
+
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+
+.main-nav-link:link, .main-nav-link:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-nav-link:hover, .main-nav-link:active {
+    color: #000;
+}
+
+.main-nav-link.nav-cta:link, .main-nav-link.nav-cta:visited {
+    padding: 1.6rem 3.2rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    background-color: #e8590c;
+    opacity: 0.8;
+    
+}
+
+.main-nav-link.nav-cta:hover, .main-nav-link.nav-cta:active {
+    opacity: 1;
+
+}
+
+/* HERO SECTION */
 
 .header-container {
     max-width: 120rem;
@@ -106,7 +152,7 @@ nav:hover {
 }
 
 .heading-primary {
-    font-size: 5.2rem;
+    font-size: 7.4rem;
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.5px;
@@ -119,10 +165,12 @@ nav:hover {
 }
 
 .hero-description {
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 1.6;
     margin-bottom: 4.8rem;
 }
+
+/* Buttons */
 
 .btn:link, .btn:visited {
     color: white;
@@ -133,6 +181,9 @@ nav:hover {
     font-weight: 500;
     font-size: 1.8rem;
     border-radius: 1.5rem;
+
+    /* Put transition in orginal state */
+    transition: background-color 0.3s;
   } 
   
   .btn:hover, .btn:active {
@@ -143,11 +194,99 @@ nav:hover {
     background-color: #ff914d;;
 }
 
+.btn--full:hover, .btn--full:active {
+    background-color: #e8590c;
+}
+
 .btn--outline:link, .btn--outline:visited {
     background-color: #fff;
     color: #555;
 }
 
-.bleble {
-    background-color: #fff4ed;
+
+.btn--outline:hover,
+.btn--outline:active {
+    background-color: #fdf2e9;
+
+    /* Add border inside */
+    /* box-shadow: inset 0 0 0 1px #fff; */
 }
+
+/* .margin-right-sm {
+    margin-right: 1.6rem !important;
+} */
+
+/* Faces and Text */
+
+.rly-bold {
+    font-weight: 1000;
+}
+
+.trusted-clients {
+    display: flex;
+    margin-top: 4.8rem;
+
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.delivered-faces {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.delivered-faces img {
+    height: 6.4rem;
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+}
+
+.delivered-text {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* .bold-number {
+    color: #ff914d;
+    font-weight: 800;
+} */
+
+/* /************************* */
+/* SECTION HOW */
+/************************************/
+
+.section-how {
+    padding: 9.6rem 0;
+    background-color: orangered;
+}
+
+.grid {
+    display: grid;
+    gap: 9.6rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.section-how div {
+    padding: 10rem;
+    font-size: 5rem;
+}
+
+
+.section-how div:nth-child(1) {
+    background-color: aqua;}
+.section-how div:nth-child(2) {background-color: blue ; }
+.section-how div:nth-child(3) {background-color: violet; }
+.section-how div:nth-child(4) {background-color: yellow; }
