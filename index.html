@@ -21,7 +21,7 @@
                     <li><a href="#" class="main-nav-link">Section 2</a></li>
                     <li><a href="#" class="main-nav-link">Section 3</a></li>
                     <li><a href="#" class="main-nav-link">Section 4</a></li>
-                    <li><a href="#" class="main-nav-link nav-cta">Section 5</a></li>
+                    <li><a href="#sushi" class="main-nav-link nav-cta">Section 5</a></li>
                 </ul>
             </nav>
         </nav>
@@ -46,17 +46,74 @@
     </div>
     </section>
 
-    <section class="section-how grid grid--2-cols">
-        <div>Test 1</div>
-        <div>Test 2</div>
-        <div>Test 3</div>
-        <div>Test 4</div>
-    </section>
-    <section class="section-how grid grid--3-cols">
-        <div>Test 1</div>
-        <div>Test 2</div>
-        <div>Test 3</div>
-        <div>Test 4</div>
+    <!-- This section uses a Z pattern. In CSS at the begining is defined grid -->
+    <section class="section-how">
+        <div class="container">
+            <span class="subheading">How does it work?</span>
+            <h2 class="heading-secondary">Your delicious meal delivered to 
+                your door in 3 easy steps</h2>
+        </div>
+        <div class="container grid grid--2-cols">
+
+            <!-- STEP 01 -->
+            <div class="step-text-box">
+                <p class="step-number">01</p>
+                <h3 class="heading-tertiary">Share your tastes with us.</h3> 
+                <p class="step-description">
+                    Say goodbye to the hassle of figuring out 
+                    what to eat every day. Foodtopia AI will design 
+                    a unique weekly meal plan specifically for you 
+                    that is completly tailored to your preferences. 
+                    The meal plan will ensure you receive all the 
+                    necessary nutrients and vitamins, regardless of 
+                    your dietary restrictions.
+                </p>
+            </div>
+
+            <div class="step-img-box">
+                <img src="img/app/app-screen-1.png" 
+                class="step-img" alt="first-step-in-app-img">
+            </div>
+            
+            <!-- STEP 02 -->
+            <div class="step-img-box">
+                <img src="img/app/app-screen-2.png" 
+                class="step-img" alt="second-step-in-app-img">
+            </div>
+
+            <div class="step-text-box">
+                <p class="step-number">02</p>
+                <h3 class="heading-tertiary">Confirm your weekly meal plan:</h3> 
+                <p class="step-description">
+                    Each week, give the green light 
+                    to the meal plan generated for 
+                    you by Foodtopia AI. You have the
+                    flexibility to modify ingredients,
+                    switch entire meals, or incorporate
+                    your own recipes.
+                </p>
+            </div>
+
+            <!-- STEP 03 -->
+            <div class="step-text-box">
+                <p class="step-number">03</p>
+                <h3 class="heading-tertiary">Enjoy meals at a time that suits you:</h3> 
+                <p class="step-description">
+                    Let the finest chefs in town prepare 
+                    your chosen meal daily, and we'll deliver 
+                    it to your doorstep at a time that works 
+                    best for you. You can easily adjust the 
+                    delivery schedule and address on a daily basis.
+                </p>
+
+            </div>
+
+            <div class="step-img-box">
+                <img src="img/app/app-screen-3.png" 
+                class="step-img" alt="third-step-in-app-img">
+            </div>
+        </div>
+        
     </section>
 </body>
 </html>
