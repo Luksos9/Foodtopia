@@ -41,7 +41,8 @@ Letter spacing:
 
 .grid {
     display: grid;
-    gap: 9.6rem;
+    row-gap: 9.6rem;
+    column-gap: 6.4rem;
 }
 
 .grid--2-cols {
@@ -54,6 +55,10 @@ Letter spacing:
 
 .grid--4-cols {
     grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+    align-items: center;
 }
 
 /* Global reset */
@@ -104,7 +109,7 @@ body {
     background-image: linear-gradient(rgba(34,34,34,0.6), rgba(34,34,34,0.6)), url(../img/hero2.avif);
     background-size: cover;
     color: #fff;
-    margin-bottom: 9.6rem;
+    /* margin-bottom: 9.6rem; --- cant decide if looks better */ 
 }
 
 nav {
@@ -313,6 +318,37 @@ nav:hover {
 } */
 
 /* /************************* */
+/* SECTION FEATURED IN */
+/************************************/
+
+.section-featured-in {
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+
+.heading-featured-in {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888
+}
+.logos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos img {
+    height: 2.4rem;
+    filter:grayscale(100%);
+    filter:brightness(0);
+    opacity: 0.5;
+}
+
+
+/* /************************* */
 /* SECTION HOW */
 /************************************/
 
@@ -320,6 +356,57 @@ nav:hover {
     padding: 9.6rem 0;
 }
 
+.step-number {
+    font-size:  8.6rem;
+    font-weight: 600;
+    color: #ddd;
+}
+
+.heading-tertiary {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.step-description {
+    font-size: 2.0rem;
+    line-height: 1.6;
+}
+
+.step-img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+    content: "";
+    display:block;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+    width:85%;
+
+    /* 60% of parent's width */
+    padding-bottom: 85%;
+    background-color: #ffe9db;
+    z-index: -2;
+}
+
+.step-img-box::after {
+    width: 60%;
+    padding-bottom: 60%;
+    background-color: #ffdeca;
+    z-index: -1;
+}
+
 .step-img {
-    width: 50%;
+    width: 40%;
 }
